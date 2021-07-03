@@ -1,9 +1,3 @@
-#COMANDOS
-#instalar flask - pip install Flask (fizemos dentro do VENV)
-# Criar um Virtual Env - virtualenv venv
-# Virtualenv - venv\scripts\activate  
-
-#render_template permite renderizar ficheiros que não são de PY (html pr exemplo)
 from classes import pyodbc
 from flask import Flask, redirect, url_for, request, render_template
 from classes.colaboradorconnector import ColaboradorConnector
@@ -30,19 +24,7 @@ def success(username):
     # username = username é o que definimos no HTML e o outro é Param da própria Func sql
     return render_template('dashboard.html',todososclientes=json.loads(result), username=username)
 
-# @app.route('/novapassword', methods=['POST'])
-# def novapassword():
-#     username=request.form['username']
-#     password=request.form['novapassword']
-#     password2=request.form['repitapassword']
 
-#     colaborador=ColaboradorConnector()
-#     result=colaborador.novaPassword(username,password,password2)
-
-#     if result[0][0]==0:
-#         return redirect(url_for('success', username=result[0][2]))
-#     else:
-#         return redirect(url_for('failure',result[0][2]))
 
 @app.route('/novapassword', methods = ['POST'])
 def novapassword():
