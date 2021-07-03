@@ -1,0 +1,10 @@
+.LoginBox {
+    position: absolute;
+    width:430px;
+    height:250px;
+    top:50%;
+    margin-top:-125px;
+    left:50%;
+    margin-left:-210px;
+}
+
